@@ -1,0 +1,37 @@
+subprojects {
+	apply plugin: "eclipse"
+	apply plugin: "java"
+
+	sourceCompatibility = "1.8"
+	
+	repositories {
+		mavenCentral()
+	}
+	
+	eclipse {
+		project {
+			natures("org.springsource.ide.eclipse.gradle.core.nature")
+		}
+	}
+
+	tasks.eclipse.doLast {
+		copy {
+			from("../eclipse-settings")
+			into(".settings")
+		}
+	}
+
+	tasks.cleanEclipse.doLast {
+		delete(".settings")
+	}
+	
+	jar {
+		manifest {
+			attributes("Built-By": System.getProperty("user.name"), "Implementation-URL": "https://github.com/UnAfraid/RemoteControl/")
+		}	
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = "4.2"
+}
