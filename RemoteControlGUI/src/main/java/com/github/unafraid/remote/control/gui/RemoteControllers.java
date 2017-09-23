@@ -16,34 +16,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api.util;
+package com.github.unafraid.remote.control.gui;
 
-public enum OperationSystemType
+/**
+ * @author UnAfraid
+ */
+public enum RemoteControllers
 {
-	WINDOWS_x86("win32/x86/", ".dll"),
-	WINDOWS_x64("win32/x64/", ".dll"),
-	MACOS_x86(null, null),
-	MACOS_x64("macos/x64/", ".dylib"),
-	LINUX_x86("linux/x86.", ".so"),
-	LINUX_x64("linux/x64.", ".so"),
-	OTHER(null, null);
+	Huawei_EC2108V5("Huawei EC2108V5 IR Remote", "/views/Huawei-EC2108V5.fxml");
 	
-	private final String _osPath;
-	private final String _extension;
+	private final String name;
+	private final String fxml;
 	
-	private OperationSystemType(String osPath, String extension)
+	private RemoteControllers(String name, String fxml)
 	{
-		_osPath = osPath;
-		_extension = extension;
+		this.name = name;
+		this.fxml = fxml;
 	}
 	
-	public String getOSPath()
+	public String getName()
 	{
-		return _osPath;
+		return name;
 	}
 	
-	public String getExtension()
+	public String getFXml()
 	{
-		return _extension;
+		return fxml;
 	}
 }

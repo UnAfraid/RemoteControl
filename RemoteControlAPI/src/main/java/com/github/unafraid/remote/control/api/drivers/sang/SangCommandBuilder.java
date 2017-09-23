@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2016 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 
@@ -28,45 +28,47 @@ import com.github.unafraid.remote.control.api.drivers.sang.model.SangState;
  */
 public class SangCommandBuilder
 {
-	private SangMode _mode;
-	private SangState _state;
-	private int _temperature;
-	private SangFanMode _fanMode;
+	private final SangDriver driver;
+	private SangMode mode;
+	private SangState state;
+	private int temperature;
+	private SangFanMode fanMode;
 	
-	public SangCommandBuilder(SangMode mode, SangState state, int temperature, SangFanMode fanMode)
+	protected SangCommandBuilder(SangDriver driver, SangMode mode, SangState state, int temperature, SangFanMode fanMode)
 	{
-		_mode = mode;
-		_state = state;
-		_temperature = temperature;
-		_fanMode = fanMode;
+		this.driver = driver;
+		this.mode = mode;
+		this.state = state;
+		this.temperature = temperature;
+		this.fanMode = fanMode;
 	}
 	
 	public SangCommandBuilder state(SangState state)
 	{
-		_state = state;
+		this.state = state;
 		return this;
 	}
 	
 	public SangCommandBuilder mode(SangMode mode)
 	{
-		_mode = mode;
+		this.mode = mode;
 		return this;
 	}
 	
 	public SangCommandBuilder temperature(int temperature)
 	{
-		_temperature = temperature;
+		this.temperature = temperature;
 		return this;
 	}
 	
 	public SangCommandBuilder fanMode(SangFanMode fanMode)
 	{
-		_fanMode = fanMode;
+		this.fanMode = fanMode;
 		return this;
 	}
 	
 	public RCReturnType send()
 	{
-		return SangDriver.getInstance().sendPacket(_state, _mode, _temperature, _fanMode);
+		return driver.sendPacket(state, mode, temperature, fanMode);
 	}
 }

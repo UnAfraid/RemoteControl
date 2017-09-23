@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2017 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 
@@ -18,13 +18,12 @@
  */
 package com.github.unafraid.remote.control.gui;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -32,16 +31,12 @@ import javafx.stage.Stage;
  */
 public class Main extends Application
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
-	
 	@Override
 	public void start(Stage primaryStage) throws Exception
 	{
-		LOGGER.info("Initializing..");
-		
 		final Parent root = FXMLLoader.load(getClass().getResource("/views/Main.fxml"));
 		final Scene scene = new Scene(root);
-		// primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/images/app.jpg")));
+		primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/images/app.jpg")));
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Remote Controller");
 		primaryStage.setOnCloseRequest(event -> shutdown());
@@ -50,7 +45,7 @@ public class Main extends Application
 	
 	public static void shutdown()
 	{
-		LOGGER.info("Shutting down..");
+		Platform.exit();
 	}
 	
 	public static void main(String... args)

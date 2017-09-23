@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2017 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 
@@ -22,23 +22,25 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.github.unafraid.remote.control.api.RCDriver;
-import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiButtonsType;
-import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiDriver;
 import com.github.unafraid.remote.control.gui.Main;
+import com.github.unafraid.remote.control.gui.RemoteControllers;
 import com.github.unafraid.remote.control.gui.util.Dialogs;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 
 /**
  * @author UnAfraid
  */
 public class MainController implements Initializable
 {
-	private final HuaweiDriver driver = new HuaweiDriver();
+	@FXML
+	private TabPane devices;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
@@ -46,6 +48,22 @@ public class MainController implements Initializable
 		try
 		{
 			RCDriver.init();
+			
+			for (RemoteControllers controller : RemoteControllers.values())
+			{
+				try
+				{
+					final FXMLLoader loader = new FXMLLoader(getClass().getResource(controller.getFXml()));
+					
+					final Tab tab = new Tab(controller.getName());
+					tab.setContent(loader.load());
+					devices.getTabs().add(tab);
+				}
+				catch (Exception e)
+				{
+					Dialogs.showExceptionDialog(AlertType.ERROR, "Error", "Failed to initialize view for " + controller, e);
+				}
+			}
 		}
 		catch (Exception e)
 		{
@@ -63,24 +81,5 @@ public class MainController implements Initializable
 	private void onAboutRequest(ActionEvent event)
 	{
 		
-	}
-	
-	@FXML
-	private void onKeyPressed(KeyEvent event)
-	{
-		// TODO: Mapping
-	}
-	
-	@FXML
-	private void onPower(ActionEvent event)
-	{
-		try
-		{
-			driver.sendButton(HuaweiButtonsType.BUTTON_POWER);
-		}
-		catch (Exception e)
-		{
-			Dialogs.showExceptionDialog(AlertType.ERROR, "Error", "Failed to send button", e);
-		}
 	}
 }

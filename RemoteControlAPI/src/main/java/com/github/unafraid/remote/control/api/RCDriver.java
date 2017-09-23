@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2016 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 
@@ -19,13 +19,11 @@
 package com.github.unafraid.remote.control.api;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.github.unafraid.remote.control.api.util.OperationSystem;
 import com.github.unafraid.remote.control.api.util.OperationSystemType;
@@ -35,7 +33,6 @@ import com.github.unafraid.remote.control.api.util.OperationSystemType;
  */
 public class RCDriver
 {
-	private static final Logger LOGGER = LoggerFactory.getLogger(RCDriver.class);
 	private static final String NATIVE_PATH_PATH = "/native/impl/";
 	private static final String HID_API_PATH = "hidapi";
 	private static final String IR_TX_PATH = "ir_tx";
@@ -90,8 +87,11 @@ public class RCDriver
 				fos.write(buffer, 0, read);
 			}
 		}
+		catch (FileNotFoundException e)
+		{
+			
+		}
 		
-		LOGGER.info("Loading {}", file.getAbsolutePath());
 		System.load(file.getAbsolutePath());
 	}
 	
