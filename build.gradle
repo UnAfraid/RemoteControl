@@ -25,10 +25,8 @@ subprojects {
 		delete(".settings")
 	}
 	
-	jar {
-		manifest {
-			attributes("Built-By": System.getProperty("user.name"), "Implementation-URL": "https://github.com/UnAfraid/RemoteControl/")
-		}	
+	tasks.withType(JavaCompile) {
+		options.encoding = "UTF-8"
 	}
 }
 

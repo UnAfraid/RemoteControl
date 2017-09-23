@@ -19,6 +19,7 @@
 package com.github.unafraid.remote.control.api;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -50,6 +51,7 @@ public class RCDriver
 		{
 			throw new RuntimeException("Unsupported OS: " + System.getProperty("os.name", "generic").toLowerCase(Locale.ENGLISH) + " " + System.getProperty("os.arch"));
 		}
+		LOGGER.info("Initializing OS: {}", osType);
 		loadJarDll(NATIVE_PATH_PATH + osType.getOSPath() + HID_API_PATH + osType.getExtension());
 		loadJarDll(NATIVE_PATH_PATH + osType.getOSPath() + IR_TX_PATH + osType.getExtension());
 		INITIALIZED = true;
@@ -89,6 +91,10 @@ public class RCDriver
 			{
 				fos.write(buffer, 0, read);
 			}
+		}
+		catch (FileNotFoundException e)
+		{
+			LOGGER.info("File is in use, not replacing");
 		}
 		
 		LOGGER.info("Loading {}", file.getAbsolutePath());
