@@ -1,3 +1,35 @@
+plugins {
+	id "edu.sc.seis.launch4j" version "2.4.1"
+	id "com.github.johnrengelman.shadow" version "2.0.1"
+}
+
+apply plugin: "edu.sc.seis.launch4j"
+apply plugin: "com.github.johnrengelman.shadow"
+
 dependencies {
 	compile project(':RemoteControlAPI')
+}
+
+def generalManifest = manifest {
+	attributes(
+		"Built-By": System.getProperty("user.name"),
+		"Implementation-URL": "https://github.com/UnAfraid/RemoteControl",
+		"Main-Class": "com.github.unafraid.remote.control.gui.Main",
+	)
+}
+
+jar {
+	manifest {
+		from(generalManifest)
+	}
+}
+
+
+launch4j {
+	bundledJrePath = "jre"
+	copyConfigurable = project.tasks.shadowJar.outputs.files
+	jar = "lib/${project.tasks.shadowJar.archiveName}"
+	mainClassName = "com.github.unafraid.remote.control.gui.Main"
+	icon = project.projectDir.getAbsolutePath() + "/launch4j/app.ico"
+	manifest = project.projectDir.getAbsolutePath() + "/launch4j/app.exe.manifest"
 }

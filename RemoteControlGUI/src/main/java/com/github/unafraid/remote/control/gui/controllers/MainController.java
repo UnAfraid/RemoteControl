@@ -69,14 +69,242 @@ public class MainController implements Initializable
 	private void onKeyPressed(KeyEvent event)
 	{
 		// TODO: Mapping
+		System.out.println("onKeyPressed " + event.getCode() + " : not implemented yet");
 	}
 	
 	@FXML
 	private void onPower(ActionEvent event)
 	{
+		handleEvent(HuaweiButtonsType.BUTTON_POWER);
+	}
+	
+	@FXML
+	private void onMute(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_MUTE);
+	}
+	
+	@FXML
+	private void onLang(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_LANG);
+	}
+	
+	@FXML
+	private void onSearch(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_SEARCH);
+	}
+	
+	@FXML
+	private void onEPG(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_EPG);
+	}
+	
+	@FXML
+	private void onVOD(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_VOD);
+	}
+	
+	@FXML
+	private void onPIP(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_PIP);
+	}
+	
+	@FXML
+	private void onAPP(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_APP);
+	}
+	
+	@FXML
+	private void onHelp(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_HELP);
+	}
+	
+	@FXML
+	private void onCHPlus(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_CHUP);
+	}
+	
+	@FXML
+	private void onInfo(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_INFO);
+	}
+	
+	@FXML
+	private void onVolMinus(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_VOLDN);
+	}
+	
+	@FXML
+	private void onOK(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_OK);
+	}
+	
+	@FXML
+	private void onVolPlus(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_VOLUP);
+	}
+	
+	@FXML
+	private void onMenu(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_MENU);
+	}
+	
+	@FXML
+	private void onCHMinus(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_CHDN);
+	}
+	
+	@FXML
+	private void onBack(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_BACK);
+	}
+	
+	@FXML
+	private void onPrev(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_PREV);
+	}
+	
+	@FXML
+	private void onNext(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_NEXT);
+	}
+	
+	@FXML
+	private void onRewind(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_REW);
+	}
+	
+	@FXML
+	private void onPlayPause(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_PLAY);
+	}
+	
+	@FXML
+	private void onFastForward(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_FF);
+	}
+	
+	@FXML
+	private void onRed(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_RED);
+	}
+	
+	@FXML
+	private void onGreen(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_GREEN);
+	}
+	
+	@FXML
+	private void onYellow(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_YELLOW);
+	}
+	
+	@FXML
+	private void onBlue(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_BLUE);
+	}
+	
+	@FXML
+	private void onOne(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_1);
+	}
+	
+	@FXML
+	private void onTwo(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_2);
+	}
+	
+	@FXML
+	private void onThree(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_3);
+	}
+	
+	@FXML
+	private void onFour(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_4);
+	}
+	
+	@FXML
+	private void onFive(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_5);
+	}
+	
+	@FXML
+	private void onSix(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_6);
+	}
+	
+	@FXML
+	private void onSeven(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_7);
+	}
+	
+	@FXML
+	private void onEight(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_8);
+	}
+	
+	@FXML
+	private void onNine(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_9);
+	}
+	
+	@FXML
+	private void onStar(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_STAR);
+	}
+	
+	@FXML
+	private void onZero(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_0);
+	}
+	
+	@FXML
+	private void onHashtag(ActionEvent event)
+	{
+		handleEvent(HuaweiButtonsType.BUTTON_HASH);
+	}
+	
+	private void handleEvent(HuaweiButtonsType buttonType)
+	{
 		try
 		{
-			driver.sendButton(HuaweiButtonsType.BUTTON_POWER);
+			driver.sendButton(buttonType);
 		}
 		catch (Exception e)
 		{
