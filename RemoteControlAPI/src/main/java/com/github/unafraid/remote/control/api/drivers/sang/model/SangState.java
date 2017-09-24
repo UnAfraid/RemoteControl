@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2016 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 

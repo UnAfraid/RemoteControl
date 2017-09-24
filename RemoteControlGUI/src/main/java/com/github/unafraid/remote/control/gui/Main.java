@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2017 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 
@@ -19,6 +19,7 @@
 package com.github.unafraid.remote.control.gui;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -44,6 +45,7 @@ public class Main extends Application
 	
 	public static void shutdown()
 	{
+		Platform.exit();
 	}
 	
 	public static void main(String... args)

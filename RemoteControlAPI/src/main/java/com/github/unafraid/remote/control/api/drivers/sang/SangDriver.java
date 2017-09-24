@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2004-2016 Remote Control
+ * Copyright (C) 2016-2017 Remote Control
  * 
  * This file is part of Remote Control.
  * 
@@ -30,52 +30,42 @@ import com.github.unafraid.remote.control.api.drivers.sang.model.SangState;
  */
 public class SangDriver extends RCDriver
 {
-	private SangMode _lastMode = SangMode.HEAT;
-	private SangState _lastState = SangState.ON;
-	private int _lastTemperature = 24;
-	private SangFanMode _lastFanMode = SangFanMode.AUTO;
+	private SangMode lastMode = SangMode.HEAT;
+	private SangState lastState = SangState.ON;
+	private int lastTemperature = 24;
+	private SangFanMode lastFanMode = SangFanMode.AUTO;
 	
 	public RCReturnType sendPacket(SangState state, SangMode mode, int temperature, SangFanMode fanMode)
 	{
-		_lastState = state;
-		_lastMode = mode;
-		_lastTemperature = temperature;
-		_lastFanMode = fanMode;
+		this.lastState = state;
+		this.lastMode = mode;
+		this.lastTemperature = temperature;
+		this.lastFanMode = fanMode;
 		return RCReturnType.ofId(sendPacket(RCDeviceType.SANG.getValue(), state == SangState.ON ? (byte) 1 : 0, mode.getValue(), (byte) temperature, fanMode.getValue()));
 	}
 	
 	public SangMode getLastMode()
 	{
-		return _lastMode;
+		return lastMode;
 	}
 	
 	public SangState getLastState()
 	{
-		return _lastState;
+		return lastState;
 	}
 	
 	public int getLastTemperature()
 	{
-		return _lastTemperature;
+		return lastTemperature;
 	}
 	
 	public SangFanMode getLastFanMode()
 	{
-		return _lastFanMode;
+		return lastFanMode;
 	}
 	
 	public SangCommandBuilder newBuilder()
 	{
-		return new SangCommandBuilder(_lastMode, _lastState, _lastTemperature, _lastFanMode);
-	}
-	
-	public static SangDriver getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final SangDriver INSTANCE = new SangDriver();
+		return new SangCommandBuilder(this, lastMode, lastState, lastTemperature, lastFanMode);
 	}
 }
