@@ -23,8 +23,8 @@ package com.github.unafraid.remote.control.gui;
  */
 public enum RemoteControllers
 {
-	Huawei_EC2108V5("Huawei EC2108V5 IR Remote", "/views/Huawei-EC2108V5.fxml");
-	
+	IPTV_Huawei_EC2108V5("Huawei EC2108V5 IR Remote", "/views/Huawei-EC2108V5.fxml"),
+	AC_SANG("Sang AC IR Remote", "/views/Sang-AC.fxml");
 	private final String name;
 	private final String fxml;
 	
