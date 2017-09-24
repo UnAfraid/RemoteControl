@@ -18,60 +18,21 @@
  */
 package com.github.unafraid.remote.control.gui.controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import com.github.unafraid.remote.control.api.RCDriver;
 import com.github.unafraid.remote.control.api.RCReturnType;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiButtonsType;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiDriver;
-import com.github.unafraid.remote.control.gui.Main;
 import com.github.unafraid.remote.control.gui.util.Dialogs;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.KeyEvent;
 
 /**
  * @author UnAfraid
  */
-public class HuaweiController implements Initializable
+public class HuaweiController
 {
 	private final HuaweiDriver driver = new HuaweiDriver();
-	
-	@Override
-	public void initialize(URL location, ResourceBundle resources)
-	{
-		try
-		{
-			RCDriver.init();
-		}
-		catch (Exception e)
-		{
-			Dialogs.showExceptionDialog(AlertType.ERROR, "Error", "Failed to initialize driver", e);
-		}
-	}
-	
-	@FXML
-	private void onExitRequest(ActionEvent event)
-	{
-		Main.shutdown();
-	}
-	
-	@FXML
-	private void onAboutRequest(ActionEvent event)
-	{
-		
-	}
-	
-	@FXML
-	private void onKeyPressed(KeyEvent event)
-	{
-		// TODO: Mapping
-		System.out.println("onKeyPressed " + event.getCode() + " : not implemented yet");
-	}
 	
 	@FXML
 	private void onPower(ActionEvent event)
