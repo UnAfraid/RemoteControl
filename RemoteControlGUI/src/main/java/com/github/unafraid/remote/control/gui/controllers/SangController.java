@@ -18,6 +18,8 @@
  */
 package com.github.unafraid.remote.control.gui.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.function.Function;
 
 import com.github.unafraid.remote.control.api.RCReturnType;
@@ -30,14 +32,33 @@ import com.github.unafraid.remote.control.gui.util.Dialogs;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
 
 /**
  * @author UnAfraid
  */
-public class SangController
+public class SangController implements Initializable
 {
+	@FXML
+	private Label modeLabel;
+	
+	@FXML
+	private Label tempLabel;
+	
+	@FXML
+	private Label fanLabel;
+	
 	private final SangDriver driver = new SangDriver();
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources)
+	{
+		modeLabel.setText(driver.getLastMode().name());
+		tempLabel.setText(Integer.toString(driver.getLastTemperature()));
+		fanLabel.setText(driver.getLastFanMode().name() + " / " + driver.getLastState().name());
+	}
 	
 	@FXML
 	private void onSleep(ActionEvent event)
@@ -147,6 +168,9 @@ public class SangController
 			{
 				Dialogs.showDialog(AlertType.WARNING, "Warning", "Failed to send button", "API returned " + type);
 			}
+			modeLabel.setText(driver.getLastMode().name());
+			tempLabel.setText(Integer.toString(driver.getLastTemperature()));
+			fanLabel.setText(driver.getLastFanMode().name() + " / " + driver.getLastState().name());
 		}
 		catch (Exception e)
 		{
