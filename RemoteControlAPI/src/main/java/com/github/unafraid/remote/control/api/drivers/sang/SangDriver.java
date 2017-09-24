@@ -39,7 +39,7 @@ public class SangDriver extends RCDriver
 	{
 		this.lastState = state;
 		this.lastMode = mode;
-		this.lastTemperature = temperature;
+		this.lastTemperature = Math.max(Math.min(temperature, 31), 17);
 		this.lastFanMode = fanMode;
 		return RCReturnType.ofId(sendPacket(RCDeviceType.SANG.getValue(), state == SangState.ON ? (byte) 1 : 0, mode.getValue(), (byte) temperature, fanMode.getValue()));
 	}

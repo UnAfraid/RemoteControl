@@ -22,6 +22,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.github.unafraid.remote.control.api.RCDriver;
+import com.github.unafraid.remote.control.api.RCReturnType;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiButtonsType;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiDriver;
 import com.github.unafraid.remote.control.gui.Main;
@@ -304,7 +305,11 @@ public class HuaweiController implements Initializable
 	{
 		try
 		{
-			driver.sendButton(buttonType);
+			final RCReturnType type = driver.sendButton(buttonType);
+			if (type != RCReturnType.SUCCESS)
+			{
+				Dialogs.showDialog(AlertType.WARNING, "Warning", "Failed to send button", "API returned " + type);
+			}
 		}
 		catch (Exception e)
 		{
