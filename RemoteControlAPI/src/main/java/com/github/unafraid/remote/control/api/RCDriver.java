@@ -125,5 +125,10 @@ public class RCDriver
 	 *         <li>6 = Failed to send packet</li>
 	 *         </ul>
 	 */
-	protected native int sendPacket(int acType, byte onOff, byte mode, byte temperature, byte fanMode);
+	protected native byte sendPacket(byte acType, byte onOff, byte mode, byte temperature, byte fanMode);
+	
+	/**
+	 * @return
+	 */
+	public native byte hasEmitter();
 }

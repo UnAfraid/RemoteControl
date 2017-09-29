@@ -37,7 +37,7 @@ public enum RCDeviceType
 		_type = (byte) type;
 	}
 	
-	public int getValue()
+	public byte getValue()
 	{
 		return _type;
 	}

@@ -32,7 +32,7 @@ public enum RCReturnType
 	FAILED_TO_SEND_PACKET,
 	UNKNOWN_ERROR;
 	
-	public static RCReturnType ofId(int id)
+	public static RCReturnType ofId(byte id)
 	{
 		if ((id < 0) || (id > values().length))
 		{
