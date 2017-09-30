@@ -16,28 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api;
+package com.github.unafraid.remote.control.api.enums;
 
 /**
  * @author UnAfraid
  */
-public enum RCReturnType
+public enum RCDeviceType
 {
-	SUCCESS,
-	HID_INIT_FAILED,
-	DEVICE_NOT_FOUND,
-	UNABLE_TO_OPEN_DEVICE,
-	UNSUPPORTED_DEVICE_TYPE,
-	FAILED_TO_GENERATE_PACKET,
-	FAILED_TO_SEND_PACKET,
-	UNKNOWN_ERROR;
+	TEST(0),
+	NEO(1),
+	MIDEA(2),
+	SANG(3),
+	SAMSUNG(4),
+	HUAWEI(5);
 	
-	public static RCReturnType ofId(byte id)
+	private byte _type;
+	
+	private RCDeviceType(int type)
 	{
-		if ((id < 0) || (id > values().length))
-		{
-			return UNKNOWN_ERROR;
-		}
-		return values()[id];
+		_type = (byte) type;
+	}
+	
+	public byte getValue()
+	{
+		return _type;
 	}
 }

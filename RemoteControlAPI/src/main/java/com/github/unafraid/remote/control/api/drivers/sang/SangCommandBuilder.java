@@ -18,10 +18,10 @@
  */
 package com.github.unafraid.remote.control.api.drivers.sang;
 
-import com.github.unafraid.remote.control.api.RCReturnType;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangFanMode;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangMode;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangState;
+import com.github.unafraid.remote.control.api.enums.RCReturnType;
 
 /**
  * @author UnAfraid
@@ -67,8 +67,8 @@ public class SangCommandBuilder
 		return this;
 	}
 	
-	public RCReturnType send()
+	public RCReturnType send(String devicePath)
 	{
-		return driver.sendPacket(state, mode, temperature, fanMode);
+		return driver.sendPacket(devicePath, state, mode, temperature, fanMode);
 	}
 }

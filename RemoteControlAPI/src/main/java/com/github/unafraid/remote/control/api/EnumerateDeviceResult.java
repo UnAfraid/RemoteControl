@@ -18,27 +18,39 @@
  */
 package com.github.unafraid.remote.control.api;
 
+import com.github.unafraid.remote.control.api.enums.RCHasEmitterReturnType;
+
 /**
  * @author UnAfraid
  */
-public enum RCDeviceType
+public class EnumerateDeviceResult
 {
-	TEST(0),
-	NEO(1),
-	MIDEA(2),
-	SANG(3),
-	SAMSUNG(4),
-	HUAWEI(5);
+	private final RCHasEmitterReturnType result;
+	private final String device;
 	
-	private byte _type;
-	
-	private RCDeviceType(int type)
+	/**
+	 * @param result
+	 * @param device
+	 */
+	public EnumerateDeviceResult(RCHasEmitterReturnType result, String device)
 	{
-		_type = (byte) type;
+		this.result = result;
+		this.device = device;
 	}
 	
-	public byte getValue()
+	/**
+	 * @return the result
+	 */
+	public RCHasEmitterReturnType getResult()
 	{
-		return _type;
+		return result;
+	}
+	
+	/**
+	 * @return the device
+	 */
+	public String getDevice()
+	{
+		return device;
 	}
 }

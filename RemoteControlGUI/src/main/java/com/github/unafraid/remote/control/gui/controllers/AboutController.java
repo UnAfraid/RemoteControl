@@ -16,19 +16,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api.drivers.huawei;
+package com.github.unafraid.remote.control.gui.controllers;
 
-import com.github.unafraid.remote.control.api.RCDriver;
-import com.github.unafraid.remote.control.api.enums.RCDeviceType;
-import com.github.unafraid.remote.control.api.enums.RCReturnType;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 /**
  * @author UnAfraid
  */
-public class HuaweiDriver extends RCDriver
+public final class AboutController
 {
-	public RCReturnType sendButton(String devicePath, HuaweiButtonsType buttonType)
+	@FXML
+	public void onOkButton(ActionEvent event)
 	{
-		return sendPacket(devicePath, RCDeviceType.HUAWEI.getValue(), buttonType.getCode(), (byte) 0, (byte) 0, (byte) 0);
+		((Button) event.getSource()).getScene().getWindow().hide();
 	}
 }

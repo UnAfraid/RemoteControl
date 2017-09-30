@@ -1,9 +1,4 @@
-task buildNativeHeader(type:Exec) {
-    def classPath = sourceSets.main.output.classesDir
-    def outputPath = "${buildDir}/native/RCDriver"
-    def classPackage = "com.github.unafraid.remote.control.api.RCDriver"
-    println classPath
-    commandLine "javah", "-o", outputPath, "-classpath", classPath, classPackage
-
-    dependsOn classes
+dependencies {
+	compile 'net.java.dev.jna:jna:4.5.0'
+	compile 'net.java.dev.jna:jna-platform:4.5.0'
 }

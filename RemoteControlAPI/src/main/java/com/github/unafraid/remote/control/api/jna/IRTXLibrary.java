@@ -16,19 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api.drivers.huawei;
+package com.github.unafraid.remote.control.api.jna;
 
-import com.github.unafraid.remote.control.api.RCDriver;
-import com.github.unafraid.remote.control.api.enums.RCDeviceType;
-import com.github.unafraid.remote.control.api.enums.RCReturnType;
+import com.sun.jna.Library;
+import com.sun.jna.Pointer;
 
 /**
  * @author UnAfraid
  */
-public class HuaweiDriver extends RCDriver
+public interface IRTXLibrary extends Library
 {
-	public RCReturnType sendButton(String devicePath, HuaweiButtonsType buttonType)
-	{
-		return sendPacket(devicePath, RCDeviceType.HUAWEI.getValue(), buttonType.getCode(), (byte) 0, (byte) 0, (byte) 0);
-	}
+	byte enumerateDevices(Pointer devicePath);
+	
+	byte sendPacket(Pointer devicePath, byte type, byte on, byte mode, byte temp, byte fan);
 }

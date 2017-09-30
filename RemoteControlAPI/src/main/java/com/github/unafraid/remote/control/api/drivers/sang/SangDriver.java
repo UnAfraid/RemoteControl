@@ -18,30 +18,37 @@
  */
 package com.github.unafraid.remote.control.api.drivers.sang;
 
-import com.github.unafraid.remote.control.api.RCDeviceType;
 import com.github.unafraid.remote.control.api.RCDriver;
-import com.github.unafraid.remote.control.api.RCReturnType;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangFanMode;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangMode;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangState;
+import com.github.unafraid.remote.control.api.enums.RCDeviceType;
+import com.github.unafraid.remote.control.api.enums.RCReturnType;
 
 /**
  * @author UnAfraid
  */
 public class SangDriver extends RCDriver
 {
+	private String lastDevicePath;
 	private SangMode lastMode = SangMode.HEAT;
 	private SangState lastState = SangState.ON;
 	private int lastTemperature = 24;
 	private SangFanMode lastFanMode = SangFanMode.AUTO;
 	
-	public RCReturnType sendPacket(SangState state, SangMode mode, int temperature, SangFanMode fanMode)
+	protected RCReturnType sendPacket(String devicePath, SangState state, SangMode mode, int temperature, SangFanMode fanMode)
 	{
+		this.lastDevicePath = devicePath;
 		this.lastState = state;
 		this.lastMode = mode;
 		this.lastTemperature = Math.min(Math.max(temperature, 17), 31);
 		this.lastFanMode = fanMode;
-		return RCReturnType.ofId(sendPacket(RCDeviceType.SANG.getValue(), state == SangState.ON ? (byte) 1 : 0, mode.getValue(), (byte) temperature, fanMode.getValue()));
+		return sendPacket(devicePath, RCDeviceType.SANG.getValue(), state == SangState.ON ? (byte) 1 : 0, mode.getValue(), (byte) temperature, fanMode.getValue());
+	}
+	
+	public String getLastDevicePath()
+	{
+		return lastDevicePath;
 	}
 	
 	public SangMode getLastMode()
