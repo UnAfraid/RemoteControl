@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.unafraid.remote.control.gui.controllers.HuaweiController">
    <children>
       <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
@@ -51,33 +50,33 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEPG" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="EPG" HBox.hgrow="ALWAYS">
+            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEPG" ripplerFill="BLACK" style="-fx-background-color: #666;" text="EPG" textFill="WHITE" HBox.hgrow="ALWAYS">
                <graphic>
-                  <FontAwesomeIconView glyphName="LIST" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="LIST" />
                </graphic>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVOD" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="VOD" HBox.hgrow="ALWAYS">
+            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVOD" ripplerFill="BLACK" style="-fx-background-color: #666;" text="VOD" textFill="WHITE" HBox.hgrow="ALWAYS">
                <graphic>
-                  <FontAwesomeIconView glyphName="FILM" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILM" />
                </graphic>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPIP" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="PIP" HBox.hgrow="ALWAYS">
+            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPIP" ripplerFill="BLACK" style="-fx-background-color: #666;" text="PIP" textFill="WHITE" HBox.hgrow="ALWAYS">
                <graphic>
-                  <FontAwesomeIconView glyphName="PICTURE_ALT" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="PICTURE_ALT" />
                </graphic>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAPP" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="APP" HBox.hgrow="ALWAYS">
+            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAPP" ripplerFill="BLACK" style="-fx-background-color: #666;" text="APP" textFill="WHITE" HBox.hgrow="ALWAYS">
                <graphic>
-                  <FontAwesomeIconView glyphName="YOUTUBE" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="YOUTUBE" />
                </graphic>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -129,9 +128,9 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHPlus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text="CH+" GridPane.columnIndex="1">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHPlus" ripplerFill="BLACK" style="-fx-background-color: #666;" text="CH+" textFill="WHITE" GridPane.columnIndex="1">
                      <graphic>
-                        <FontAwesomeIconView glyphName="ARROW_UP" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_UP" size="15" />
                      </graphic>
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
@@ -153,28 +152,28 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolMinus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text=" VOL-">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolMinus" ripplerFill="BLACK" style="-fx-background-color: #666;" text=" VOL-" textFill="WHITE">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
                      <graphic>
-                        <FontAwesomeIconView glyphName="VOLUME_DOWN" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="VOLUME_DOWN" size="15.0" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: SILVER; -fx-background-radius: 3em;" text="OK" GridPane.columnIndex="1">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: #666; -fx-background-radius: 3em;" text="OK" textFill="WHITE" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
                      <graphic>
-                        <FontAwesomeIconView glyphName="CHECK_CIRCLE" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="15" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolPlus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text=" VOL+" GridPane.columnIndex="2">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolPlus" ripplerFill="BLACK" style="-fx-background-color: #666;" text=" VOL+" textFill="WHITE" GridPane.columnIndex="2">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
                      <graphic>
-                        <FontAwesomeIconView glyphName="VOLUME_UP" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="VOLUME_UP" size="15.0" />
                      </graphic>
                   </JFXButton>
                </children>
@@ -196,12 +195,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHMinus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text="CH-" GridPane.columnIndex="1">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHMinus" ripplerFill="BLACK" style="-fx-background-color: #666;" text="CH-" textFill="WHITE" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
                      <graphic>
-                        <FontAwesomeIconView glyphName="ARROW_DOWN" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_DOWN" size="15" />
                      </graphic>
                   </JFXButton>
                </children>
@@ -261,7 +260,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNext" ripplerFill="BLACK" style="-fx-background-color: SILVER;" styleClass="fa fa-forward" text=" " GridPane.columnIndex="2">
+                  <JFXButton contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNext" ripplerFill="BLACK" style="-fx-background-color: SILVER;" styleClass="fa fa-forward" text=" " GridPane.columnIndex="2">
                      <graphic>
                         <FontAwesomeIconView glyphName="FAST_FORWARD" size="15.0" textAlignment="CENTER" />
                      </graphic>
@@ -277,21 +276,21 @@
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRewind" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " HBox.hgrow="ALWAYS">
                <graphic>
-                  <FontAwesomeIconView glyphName="BACKWARD" />
+                  <FontAwesomeIconView glyphName="BACKWARD" size="15" />
                </graphic>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPlayPause" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " HBox.hgrow="ALWAYS">
+            <JFXButton contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPlayPause" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " HBox.hgrow="ALWAYS">
                <graphic>
-                  <FontAwesomeIconView glyphName="PLAY" textAlignment="CENTER" />
+                  <FontAwesomeIconView glyphName="PLAY" size="15" textAlignment="CENTER" />
                </graphic>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFastForward" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " HBox.hgrow="ALWAYS">
+            <JFXButton contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFastForward" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " HBox.hgrow="ALWAYS">
                <graphic>
                   <FontAwesomeIconView glyphName="FORWARD" size="15.0" textOrigin="CENTER" />
                </graphic>
