@@ -178,9 +178,9 @@
                               <FontAwesomeIconView glyphName="VOLUME_DOWN" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="OK" GridPane.columnIndex="1">
+                        <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: SILVER; -fx-background-radius: 3em; -fx-min-width: 50px; -fx-max-width: 50px;" text="OK" GridPane.columnIndex="1">
                            <GridPane.margin>
-                              <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                              <Insets bottom="5.0" left="25.0" right="5.0" top="5.0" />
                            </GridPane.margin>
                            <graphic>
                               <FontAwesomeIconView glyphName="CHECK_CIRCLE" />
