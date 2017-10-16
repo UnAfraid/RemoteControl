@@ -180,7 +180,7 @@
                   <FontAwesomeIconView glyphName="FAST_BACKWARD" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="forwardButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNext" ripplerFill="BLACK" style="-fx-background-color: SILVER; -fx-font-family: FontAwesome; -fx-font-size: 16px;" styleClass="fa fa-forward" text=" " GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNext" ripplerFill="BLACK" style="-fx-background-color: SILVER; -fx-font-family: FontAwesome; -fx-font-size: 16px;" styleClass="fa fa-forward" text=" " GridPane.columnIndex="2" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
