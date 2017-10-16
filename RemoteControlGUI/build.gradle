@@ -8,6 +8,8 @@ apply plugin: "com.github.johnrengelman.shadow"
 
 dependencies {
 	compile project(':RemoteControlAPI')
+	compile 'com.jfoenix:jfoenix:1.4.0'
+	compile 'de.jensd:fontawesomefx:8.0.8'
 }
 
 def generalManifest = manifest {

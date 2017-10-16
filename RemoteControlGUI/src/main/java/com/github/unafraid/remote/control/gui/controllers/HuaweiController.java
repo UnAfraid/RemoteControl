@@ -18,6 +18,9 @@
  */
 package com.github.unafraid.remote.control.gui.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import com.github.unafraid.remote.control.api.EnumerateDeviceResult;
 import com.github.unafraid.remote.control.api.RCDriver;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiButtonsType;
@@ -26,16 +29,31 @@ import com.github.unafraid.remote.control.api.enums.RCHasEmitterReturnType;
 import com.github.unafraid.remote.control.api.enums.RCReturnType;
 import com.github.unafraid.remote.control.gui.util.Dialogs;
 
+import de.jensd.fx.fontawesome.AwesomeDude;
+import de.jensd.fx.fontawesome.AwesomeIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 
 /**
  * @author UnAfraid
  */
-public class HuaweiController
+public class HuaweiController implements Initializable
 {
 	private final HuaweiDriver driver = new HuaweiDriver();
+	
+	@FXML
+	private Button forwardButton;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources)
+	{
+		
+		forwardButton = AwesomeDude.createIconButton(AwesomeIcon.STAR, "Nice!", "48.0", "20.0", ContentDisplay.TOP);
+	}
 	
 	@FXML
 	private void onPower(ActionEvent event)

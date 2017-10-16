@@ -95,6 +95,11 @@ public class SangController implements Initializable
 			}
 			case LOW:
 			{
+				mode = SangFanMode.MEDIUM;
+				break;
+			}
+			case MEDIUM:
+			{
 				mode = SangFanMode.HIGH;
 				break;
 			}
