@@ -284,7 +284,6 @@ public class HuaweiController
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 			Dialogs.showExceptionDialog(AlertType.ERROR, "Error", "Failed to send button", e);
 		}
 	}

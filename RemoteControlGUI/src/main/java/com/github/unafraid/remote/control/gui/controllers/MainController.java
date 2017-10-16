@@ -98,7 +98,7 @@ public class MainController implements Initializable
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				Dialogs.showExceptionDialog(AlertType.ERROR, "Error", "Failed to determine emitter availability", e);
 			}
 		}
 		catch (Exception e)
