@@ -106,7 +106,7 @@ public class RCDriver
 	
 	protected static RCReturnType sendPacket(String devicePath, byte acType, byte onOff, byte mode, byte temperature, byte fanMode)
 	{
-		final Pointer memoryPointer = new Memory(devicePath.length() + 1);
+		final Pointer memoryPointer = new Memory((devicePath.length() * 2) + 1);
 		memoryPointer.setString(0, devicePath);
 		return RCReturnType.ofId(IR_TX_LIBRARY.sendPacket(memoryPointer, acType, onOff, mode, temperature, fanMode));
 	}
