@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.unafraid.remote.control.gui.controllers.HuaweiController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.unafraid.remote.control.gui.controllers.HuaweiController">
    <children>
-      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" depthTest="ENABLE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onPower" ripplerFill="BLACK" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 3em; -fx-min-width: 30px; -fx-min-height: 30px;" text=" ">
                <graphic>
@@ -20,7 +20,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMute" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="Mute" HBox.hgrow="ALWAYS">
                <graphic>
@@ -48,7 +48,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEPG" ripplerFill="BLACK" style="-fx-background-color: #666;" text="EPG" textFill="WHITE" HBox.hgrow="ALWAYS">
                <graphic>
@@ -84,19 +84,19 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <GridPane HBox.hgrow="ALWAYS">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onHelp" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="HELP">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onHelp" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="HELP" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIconView glyphName="QUESTION_CIRCLE" />
                      </graphic>
@@ -104,7 +104,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
                   </JFXButton>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onInfo" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="INFO" GridPane.columnIndex="2">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onInfo" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="INFO" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <graphic>
                         <FontAwesomeIconView glyphName="INFO_CIRCLE" />
                      </graphic>
@@ -116,16 +116,16 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
-            <GridPane HBox.hgrow="ALWAYS">
+            <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHPlus" ripplerFill="BLACK" style="-fx-background-color: #666;" text="CH+" textFill="WHITE" GridPane.columnIndex="1">
@@ -140,19 +140,19 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <GridPane HBox.hgrow="ALWAYS">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="30.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="30.0" />
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="30.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" vgrow="ALWAYS" />
                </rowConstraints>
                <children>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolMinus" ripplerFill="BLACK" style="-fx-background-color: #666;" text=" VOL-" textFill="WHITE">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolMinus" ripplerFill="BLACK" style="-fx-background-color: #666;" text=" VOL-" textFill="WHITE" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
@@ -160,7 +160,7 @@
                         <FontAwesomeIconView fill="WHITE" glyphName="VOLUME_DOWN" size="15.0" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: #666; -fx-background-radius: 3em;" text="OK" textFill="WHITE" GridPane.columnIndex="1">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: #666; -fx-background-radius: 3em;" text="OK" textFill="WHITE" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
@@ -168,7 +168,7 @@
                         <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="15" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolPlus" ripplerFill="BLACK" style="-fx-background-color: #666;" text=" VOL+" textFill="WHITE" GridPane.columnIndex="2">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolPlus" ripplerFill="BLACK" style="-fx-background-color: #666;" text=" VOL+" textFill="WHITE" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
@@ -183,19 +183,19 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
-            <GridPane HBox.hgrow="ALWAYS">
+            <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
-                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHMinus" ripplerFill="BLACK" style="-fx-background-color: #666;" text="CH-" textFill="WHITE" GridPane.columnIndex="1">
+                  <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHMinus" ripplerFill="BLACK" style="-fx-background-color: #666;" text="CH-" textFill="WHITE" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <GridPane.margin>
                         <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                      </GridPane.margin>
@@ -207,16 +207,16 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <GridPane HBox.hgrow="ALWAYS">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="30.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
                   <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMenu" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="MENU">
@@ -239,17 +239,17 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <GridPane prefHeight="15.0" prefWidth="240.0" HBox.hgrow="ALWAYS">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPrev" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " GridPane.columnIndex="1">
@@ -272,7 +272,7 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRewind" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " HBox.hgrow="ALWAYS">
                <graphic>
@@ -300,7 +300,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRed" ripplerFill="BLACK" style="-fx-background-color: red;" text=" " HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -324,7 +324,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOne" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="1" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -343,7 +343,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFour" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="4" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -362,7 +362,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSeven" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="7" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -381,7 +381,7 @@
             </JFXButton>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
          <children>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onStar" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="*" HBox.hgrow="ALWAYS">
                <HBox.margin>
@@ -401,4 +401,7 @@
          </children>
       </HBox>
    </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </VBox>
