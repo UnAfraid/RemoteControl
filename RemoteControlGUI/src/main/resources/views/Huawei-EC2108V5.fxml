@@ -38,7 +38,7 @@
          <children>
             <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" depthTest="ENABLE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#onPower" ripplerFill="BLACK" style="-fx-background-color: red; -fx-font-weight: bold; -fx-background-radius: 3em; -fx-min-width: 30px; -fx-min-height: 30px;" text=" " GridPane.columnIndex="3">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="POWER_OFF" />
@@ -46,7 +46,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLang" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="Lang." GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="LANGUAGE" />
@@ -54,7 +54,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMute" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="Mute" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="VOLUME_OFF" />
@@ -62,7 +62,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSearch" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="SEARCH" />
@@ -70,7 +70,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEPG" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="EPG" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="LIST" />
@@ -78,7 +78,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVOD" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="VOD" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="FILM" />
@@ -86,7 +86,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPIP" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="PIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="PICTURE_ALT" />
@@ -94,7 +94,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAPP" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="APP" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="YOUTUBE" />
@@ -102,7 +102,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolMinus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text=" VOL-" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="VOLUME_DOWN" />
@@ -110,7 +110,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onHelp" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="HELP" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="QUESTION_CIRCLE" />
@@ -118,7 +118,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHPlus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text="CH+" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="ARROW_UP" />
@@ -126,7 +126,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onInfo" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="INFO" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="INFO_CIRCLE" />
@@ -134,7 +134,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onVolPlus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text=" VOL+" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="VOLUME_UP" />
@@ -142,7 +142,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOK" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="CHECK_CIRCLE" />
@@ -150,7 +150,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCHMinus" ripplerFill="BLACK" style="-fx-background-color: SILVER;-fx-font-weight: bold;" text="CH-" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="ARROW_DOWN" />
@@ -158,7 +158,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMenu" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="MENU" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="BARS" />
@@ -166,7 +166,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBack" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="Back" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="UNDO" />
@@ -174,23 +174,23 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPrev" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " GridPane.rowIndex="6">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
-                  <FontAwesomeIconView glyphName="FAST_BACKWARD" />
+                  <FontAwesomeIconView glyphName="FAST_BACKWARD" size="15.0" textAlignment="CENTER" />
                </graphic>
             </JFXButton>
-            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNext" ripplerFill="BLACK" style="-fx-background-color: SILVER; -fx-font-family: FontAwesome; -fx-font-size: 16px;" styleClass="fa fa-forward" text=" " GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNext" ripplerFill="BLACK" style="-fx-background-color: SILVER;" styleClass="fa fa-forward" text=" " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
-                  <FontAwesomeIconView glyphName="FAST_FORWARD" />
+                  <FontAwesomeIconView glyphName="FAST_FORWARD" size="15.0" textAlignment="CENTER" />
                </graphic>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRewind" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " GridPane.rowIndex="7">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="BACKWARD" />
@@ -198,7 +198,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onPlayPause" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="7">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="PLAY" textAlignment="CENTER" />
@@ -206,7 +206,7 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFastForward" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="7">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
                <graphic>
                   <FontAwesomeIconView glyphName="FORWARD" size="15.0" textOrigin="CENTER" />
@@ -214,82 +214,82 @@
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRed" ripplerFill="BLACK" style="-fx-background-color: red;" text=" " GridPane.rowIndex="8">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onGreen" ripplerFill="BLACK" style="-fx-background-color: green;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="8">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onYellow" ripplerFill="BLACK" style="-fx-background-color: yellow;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="8">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBlue" ripplerFill="BLACK" style="-fx-background-color: blue;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="8">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOne" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="1" GridPane.rowIndex="9">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onTwo" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onThree" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="9">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFour" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="4" GridPane.rowIndex="10">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFive" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="10">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSix" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="10">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSeven" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="7" GridPane.rowIndex="11">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEight" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="11">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNine" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="11">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onStar" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="*" GridPane.rowIndex="12">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onZero" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="12">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
             <JFXButton maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onHashtag" ripplerFill="BLACK" style="-fx-background-color: SILVER;" text="#" GridPane.columnIndex="2" GridPane.rowIndex="12">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </GridPane.margin>
             </JFXButton>
          </children>
