@@ -22,12 +22,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-import com.github.unafraid.remote.control.api.RCReturnType;
+import com.github.unafraid.remote.control.api.EnumerateDeviceResult;
+import com.github.unafraid.remote.control.api.RCDriver;
 import com.github.unafraid.remote.control.api.drivers.sang.SangCommandBuilder;
 import com.github.unafraid.remote.control.api.drivers.sang.SangDriver;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangFanMode;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangMode;
 import com.github.unafraid.remote.control.api.drivers.sang.model.SangState;
+import com.github.unafraid.remote.control.api.enums.RCHasEmitterReturnType;
+import com.github.unafraid.remote.control.api.enums.RCReturnType;
 import com.github.unafraid.remote.control.gui.util.Dialogs;
 
 import javafx.event.ActionEvent;
@@ -63,19 +66,19 @@ public class SangController implements Initializable
 	@FXML
 	private void onSleep(ActionEvent event)
 	{
-		handleEvent(builder -> builder.fanMode(SangFanMode.AUTO_SLEEP).send());
+		handleEvent(builder -> builder.fanMode(SangFanMode.AUTO_SLEEP));
 	}
 	
 	@FXML
 	private void onUp(ActionEvent event)
 	{
-		handleEvent(builder -> builder.temperature(driver.getLastTemperature() + 1).send());
+		handleEvent(builder -> builder.temperature(driver.getLastTemperature() + 1));
 	}
 	
 	@FXML
 	private void onDown(ActionEvent event)
 	{
-		handleEvent(builder -> builder.temperature(driver.getLastTemperature() - 1).send());
+		handleEvent(builder -> builder.temperature(driver.getLastTemperature() - 1));
 	}
 	
 	@FXML
@@ -92,6 +95,11 @@ public class SangController implements Initializable
 			}
 			case LOW:
 			{
+				mode = SangFanMode.MEDIUM;
+				break;
+			}
+			case MEDIUM:
+			{
 				mode = SangFanMode.HIGH;
 				break;
 			}
@@ -102,7 +110,7 @@ public class SangController implements Initializable
 				break;
 			}
 		}
-		handleEvent(builder -> builder.fanMode(mode).send());
+		handleEvent(builder -> builder.fanMode(mode));
 	}
 	
 	@FXML
@@ -144,7 +152,7 @@ public class SangController implements Initializable
 				break;
 			}
 		}
-		handleEvent(builder -> builder.mode(mode).send());
+		handleEvent(builder -> builder.mode(mode));
 	}
 	
 	@FXML
@@ -156,14 +164,22 @@ public class SangController implements Initializable
 	@FXML
 	private void onOnOff(ActionEvent event)
 	{
-		handleEvent(builder -> builder.state(driver.getLastState() == SangState.ON ? SangState.OFF : SangState.ON).send());
+		handleEvent(builder -> builder.state(driver.getLastState() == SangState.ON ? SangState.OFF : SangState.ON));
 	}
 	
-	private void handleEvent(Function<SangCommandBuilder, RCReturnType> event)
+	private void handleEvent(Function<SangCommandBuilder, SangCommandBuilder> event)
 	{
 		try
 		{
-			final RCReturnType type = event.apply(driver.newBuilder());
+			final EnumerateDeviceResult result = RCDriver.enumerateDevices();
+			if (result.getResult() != RCHasEmitterReturnType.SUCCESS)
+			{
+				Dialogs.showDialog(AlertType.WARNING, "Warning", "Failed to send button", "enumerateDevices returned " + result.getResult());
+				return;
+			}
+			
+			final SangCommandBuilder commandBuilder = event.apply(driver.newBuilder());
+			final RCReturnType type = commandBuilder.send(result.getDevice());
 			if (type != RCReturnType.SUCCESS)
 			{
 				Dialogs.showDialog(AlertType.WARNING, "Warning", "Failed to send button", "API returned " + type);

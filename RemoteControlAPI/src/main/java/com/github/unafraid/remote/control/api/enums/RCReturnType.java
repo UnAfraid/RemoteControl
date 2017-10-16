@@ -16,19 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api.drivers.huawei;
-
-import com.github.unafraid.remote.control.api.RCDriver;
-import com.github.unafraid.remote.control.api.enums.RCDeviceType;
-import com.github.unafraid.remote.control.api.enums.RCReturnType;
+package com.github.unafraid.remote.control.api.enums;
 
 /**
  * @author UnAfraid
  */
-public class HuaweiDriver extends RCDriver
+public enum RCReturnType
 {
-	public RCReturnType sendButton(String devicePath, HuaweiButtonsType buttonType)
+	SUCCESS,
+	HID_INIT_FAILED,
+	DEVICE_NOT_FOUND,
+	UNABLE_TO_OPEN_DEVICE,
+	UNSUPPORTED_DEVICE_TYPE,
+	FAILED_TO_GENERATE_PACKET,
+	FAILED_TO_SEND_PACKET,
+	UNKNOWN_ERROR;
+	
+	public static RCReturnType ofId(byte id)
 	{
-		return sendPacket(devicePath, RCDeviceType.HUAWEI.getValue(), buttonType.getCode(), (byte) 0, (byte) 0, (byte) 0);
+		if ((id < 0) || (id > values().length))
+		{
+			return UNKNOWN_ERROR;
+		}
+		return values()[id];
 	}
 }

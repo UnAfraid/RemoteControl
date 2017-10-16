@@ -16,19 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api.drivers.huawei;
+package com.github.unafraid.remote.control.gui.util;
 
-import com.github.unafraid.remote.control.api.RCDriver;
-import com.github.unafraid.remote.control.api.enums.RCDeviceType;
-import com.github.unafraid.remote.control.api.enums.RCReturnType;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author UnAfraid
  */
-public class HuaweiDriver extends RCDriver
+public class CommonUtil
 {
-	public RCReturnType sendButton(String devicePath, HuaweiButtonsType buttonType)
+	private static final Pattern GUID_PATTERN = Pattern.compile("\\{([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\}$");
+	
+	/**
+	 * @param input
+	 * @return GUID string from given input or null if not matching
+	 */
+	public static String extractGUID(String input)
 	{
-		return sendPacket(devicePath, RCDeviceType.HUAWEI.getValue(), buttonType.getCode(), (byte) 0, (byte) 0, (byte) 0);
+		final Matcher matcher = GUID_PATTERN.matcher(input);
+		if (matcher.find())
+		{
+			return matcher.group(1);
+		}
+		return null;
 	}
 }

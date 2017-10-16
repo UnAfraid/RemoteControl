@@ -18,12 +18,16 @@
  */
 package com.github.unafraid.remote.control.gui.util;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
@@ -31,9 +35,13 @@ import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
 /**
  * @author UnAfraid
@@ -119,4 +127,32 @@ public class Dialogs
 		final Optional<ButtonType> result = dialog.showAndWait();
 		return result.isPresent() && (result.get() == ButtonType.OK);
 	}
+	
+	public static void showUtilityStage(String fxml, String title, Window owner, Image icon)
+	{
+		try
+		{
+			final Stage stage = new Stage();
+			final Parent root = FXMLLoader.load(Dialogs.class.getResource(fxml));
+			if (icon != null)
+			{
+				stage.getIcons().add(icon);
+			}
+			stage.setScene(new Scene(root));
+			if (title != null)
+			{
+				stage.setTitle(title);
+			}
+			stage.initStyle(StageStyle.UNIFIED);
+			stage.initOwner(owner);
+			stage.initModality(Modality.APPLICATION_MODAL);
+			// stage.setResizable(false);
+			stage.show();
+		}
+		catch (IOException e)
+		{
+			Dialogs.showExceptionDialog(AlertType.ERROR, "Error!", "Exception during help form creation:", e);
+		}
+	}
+	
 }

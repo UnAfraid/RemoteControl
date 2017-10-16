@@ -25,14 +25,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
 
+import com.github.unafraid.remote.control.api.enums.RCHasEmitterReturnType;
+import com.github.unafraid.remote.control.api.enums.RCReturnType;
+import com.github.unafraid.remote.control.api.jna.IRTXLibrary;
 import com.github.unafraid.remote.control.api.util.OperationSystem;
 import com.github.unafraid.remote.control.api.util.OperationSystemType;
+import com.sun.jna.Memory;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
 
 /**
  * @author UnAfraid
  */
 public class RCDriver
 {
+	private static IRTXLibrary IR_TX_LIBRARY;
 	private static final String NATIVE_PATH_PATH = "/native/impl/";
 	private static final String HID_API_PATH = "hidapi";
 	private static final String IR_TX_PATH = "ir_tx";
@@ -49,6 +56,8 @@ public class RCDriver
 		}
 		loadJarDll(NATIVE_PATH_PATH + osType.getOSPath() + HID_API_PATH + osType.getExtension());
 		loadJarDll(NATIVE_PATH_PATH + osType.getOSPath() + IR_TX_PATH + osType.getExtension());
+		
+		IR_TX_LIBRARY = Native.loadLibrary(NATIVE_PATH_PATH + osType.getOSPath() + IR_TX_PATH + osType.getExtension(), IRTXLibrary.class);
 		INITIALIZED = true;
 	}
 	
@@ -89,41 +98,24 @@ public class RCDriver
 		}
 		catch (FileNotFoundException e)
 		{
-			
+			// Sometimes when application is already running it throws FileNotFoundException that file is in use
 		}
 		
 		System.load(file.getAbsolutePath());
 	}
 	
-	/**
-	 * @param acType =
-	 *            <ul>
-	 *            <li>0 = test</li>
-	 *            <li>1 = Neo</li>
-	 *            <li>2 = Midea</li>
-	 *            <li>3 = Sang</li>
-	 *            </ul>
-	 * @param onOff
-	 * @param mode =
-	 *            <ul>
-	 *            <li>1 = heat</li>
-	 *            <li>2 = dry</li>
-	 *            <li>3 = cool</li>
-	 *            <li>7 = fan</li>
-	 *            <li>8 = feel</li>
-	 *            </ul>
-	 * @param temperature
-	 * @param fanMode
-	 * @return
-	 *         <ul>
-	 *         <li>0 = Success</li>
-	 *         <li>1 = HID Init Failed</li>
-	 *         <li>2 = Device Not Found</li>
-	 *         <li>3 = Unable to open device</li>
-	 *         <li>4 = Unsupported device type</li>
-	 *         <li>5 = Failed to generate packet</li>
-	 *         <li>6 = Failed to send packet</li>
-	 *         </ul>
-	 */
-	protected native int sendPacket(int acType, byte onOff, byte mode, byte temperature, byte fanMode);
+	protected static RCReturnType sendPacket(String devicePath, byte acType, byte onOff, byte mode, byte temperature, byte fanMode)
+	{
+		final Pointer memoryPointer = new Memory((devicePath.length() * 2) + 1);
+		memoryPointer.setString(0, devicePath);
+		return RCReturnType.ofId(IR_TX_LIBRARY.sendPacket(memoryPointer, acType, onOff, mode, temperature, fanMode));
+	}
+	
+	public static EnumerateDeviceResult enumerateDevices()
+	{
+		Pointer pointer = new Memory(2048);
+		final RCHasEmitterReturnType result = RCHasEmitterReturnType.ofId(IR_TX_LIBRARY.enumerateDevices(pointer));
+		final String response = pointer.getString(0);
+		return new EnumerateDeviceResult(result, response);
+	}
 }

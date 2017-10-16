@@ -18,9 +18,12 @@
  */
 package com.github.unafraid.remote.control.gui.controllers;
 
-import com.github.unafraid.remote.control.api.RCReturnType;
+import com.github.unafraid.remote.control.api.EnumerateDeviceResult;
+import com.github.unafraid.remote.control.api.RCDriver;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiButtonsType;
 import com.github.unafraid.remote.control.api.drivers.huawei.HuaweiDriver;
+import com.github.unafraid.remote.control.api.enums.RCHasEmitterReturnType;
+import com.github.unafraid.remote.control.api.enums.RCReturnType;
 import com.github.unafraid.remote.control.gui.util.Dialogs;
 
 import javafx.event.ActionEvent;
@@ -266,7 +269,14 @@ public class HuaweiController
 	{
 		try
 		{
-			final RCReturnType type = driver.sendButton(buttonType);
+			final EnumerateDeviceResult result = RCDriver.enumerateDevices();
+			if (result.getResult() != RCHasEmitterReturnType.SUCCESS)
+			{
+				Dialogs.showDialog(AlertType.WARNING, "Warning", "Failed to send button", "enumerateDevices returned " + result.getResult());
+				return;
+			}
+			
+			final RCReturnType type = driver.sendButton(result.getDevice(), buttonType);
 			if (type != RCReturnType.SUCCESS)
 			{
 				Dialogs.showDialog(AlertType.WARNING, "Warning", "Failed to send button", "API returned " + type);

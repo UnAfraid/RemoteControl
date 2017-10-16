@@ -18,26 +18,39 @@
  */
 package com.github.unafraid.remote.control.api;
 
+import com.github.unafraid.remote.control.api.enums.RCHasEmitterReturnType;
+
 /**
  * @author UnAfraid
  */
-public enum RCReturnType
+public class EnumerateDeviceResult
 {
-	SUCCESS,
-	HID_INIT_FAILED,
-	DEVICE_NOT_FOUND,
-	UNABLE_TO_OPEN_DEVICE,
-	UNSUPPORTED_DEVICE_TYPE,
-	FAILED_TO_GENERATE_PACKET,
-	FAILED_TO_SEND_PACKET,
-	UNKNOWN_ERROR;
+	private final RCHasEmitterReturnType result;
+	private final String device;
 	
-	public static RCReturnType ofId(int id)
+	/**
+	 * @param result
+	 * @param device
+	 */
+	public EnumerateDeviceResult(RCHasEmitterReturnType result, String device)
 	{
-		if ((id < 0) || (id > values().length))
-		{
-			return UNKNOWN_ERROR;
-		}
-		return values()[id];
+		this.result = result;
+		this.device = device;
+	}
+	
+	/**
+	 * @return the result
+	 */
+	public RCHasEmitterReturnType getResult()
+	{
+		return result;
+	}
+	
+	/**
+	 * @return the device
+	 */
+	public String getDevice()
+	{
+		return device;
 	}
 }

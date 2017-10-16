@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.github.unafraid.remote.control.api;
+package com.github.unafraid.remote.control.api.enums;
 
 /**
  * @author UnAfraid
@@ -37,7 +37,7 @@ public enum RCDeviceType
 		_type = (byte) type;
 	}
 	
-	public int getValue()
+	public byte getValue()
 	{
 		return _type;
 	}
