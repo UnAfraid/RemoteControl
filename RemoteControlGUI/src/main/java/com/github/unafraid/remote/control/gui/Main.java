@@ -36,7 +36,7 @@ public class Main extends Application
 	{
 		final Parent root = FXMLLoader.load(getClass().getResource("/views/Main.fxml"));
 		final Scene scene = new Scene(root);
-		primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/images/app.jpg")));
+		primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/images/app.png")));
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Remote Controller");
 		primaryStage.setOnCloseRequest(event -> shutdown());

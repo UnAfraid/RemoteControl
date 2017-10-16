@@ -76,7 +76,7 @@
       </GridPane>
       <ImageView fitHeight="200.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/logo.jpg" />
+            <Image url="@../images/app.png" />
          </image>
       </ImageView>
    </children>

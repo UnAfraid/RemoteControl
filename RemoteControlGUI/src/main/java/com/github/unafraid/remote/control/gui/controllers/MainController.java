@@ -170,6 +170,6 @@ public class MainController implements Initializable
 	@FXML
 	private void onAboutRequest(ActionEvent event)
 	{
-		Dialogs.showUtilityStage("/views/About.fxml", "RemoteControl - About", emitterNameText.getScene().getWindow(), new Image("/images/app.jpg"));
+		Dialogs.showUtilityStage("/views/About.fxml", "RemoteControl - About", emitterNameText.getScene().getWindow(), new Image("/images/app.png"));
 	}
 }
